@@ -57,6 +57,7 @@ the overall effort.
 ### Ancillary
 
 * [OpenDataKit](https://opendatakit.org/) - Mobile data collection for Android.
+* [OpenStreetMap](http://openstreetmap.org/) - The one, the only, OpenStreetMap.
 * [tessera](https://github.com/mojodna/tessera) -
   [tilelive](https://github.com/mapbox/tilelive)-based tile server. Can be used
   for serving static tiles (from MBTiles archives or elsewhere) and for
