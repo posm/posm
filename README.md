@@ -6,6 +6,41 @@ single device that can be deployed to the field alongside Red Cross staff and
 volunteers and facilitate mapping efforts, particularly when internet access is
 absent.
 
+## Glossary
+
+This is intended to provide a working definition of various terms used
+throughout POSM.
+
+* **AOI** - Area of Interest.
+* **Atlas** (Field Papers) - Identified by a Field Papers URL and represented as
+  a QR code.
+* **Deployment** - The sending of staff to a _deployment AOI_. Alternately, the
+  provisioning of associated artifacts necessary to facilitate enumeration to a
+  server accompanying staff into the field.
+* **Deployment AOI** - A region that staff are deployed to. Typically
+  corresponds to imagery / logistical requests.
+* **Digitization** - Tracing / transcribing features present on a _page_ into a
+  GIS system (e.g. JOSM or iD).
+* **Extent** - Bounding box coordinates describing an _AOI_.
+* **Field Enumeration** - Collection of information about geographic features
+  in the field.
+* **Form** (OpenMapKit) - Set of questions used during a field survey. Generally
+  unique to a _deployment AOI_.
+* **Page** (Field Papers) - Single sheet of paper. Part of an _atlas_;
+  identified using grid coordinates (e.g. A1, F6, ...). Corresponds to an
+  individual _survey area_. Identified by a Field Papers URL and represented as
+  a QR code.
+* **Provision** - Artifacts associated with a _task area_.
+* **Snapshot** (Field Papers) - Identified by a Field Papers URL.
+* **Survey** (OpenMapKit) - ???
+* **Survey Area** - A focused area within a _task area_. Should be sized
+  appropriately that multiple _survey areas_ can be covered by the same time in
+  a single day. Corresponds to a single _page_ within an _atlas_.
+* **Task Area** - A focused area within the _deployment AOI_. Corresponds to a
+  set of _pages_ within an _atlas_.
+* **Response** (OpenMapKit) - Collected metadata for an individual feature
+  within a _survey area_.
+
 ## Project-related Repositories
 
 POSM is an aggregation of tools that are used in field enumeration and
