@@ -6,6 +6,14 @@ single device that can be deployed to the field alongside Red Cross staff and
 volunteers and facilitate mapping efforts, particularly when internet access is
 absent.
 
+## More Information
+
+For more information, check the following sources:
+
+* [SpatialDev's introductory blog post](http://news.spatialdev.com/portable-open-street-map/)
+* [Stamen's introductory blog post](https://hi.stamen.com/taking-open-street-map-into-the-field-a07265a08f19)
+* [Dale's announcement mailing list post](https://lists.openstreetmap.org/pipermail/talk/2015-December/075250.html)
+
 ## Glossary
 
 This is intended to provide a working definition of various terms used
