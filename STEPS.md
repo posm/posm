@@ -24,7 +24,7 @@ node_modules/.bin/tl copy \
 ```bash
 curl -XPOST \
   --compressed \
-  -d "data=(node(-17.821343531895728, 30.904111862182614, -17.778602961844793, 30.95578193664551); <; >>; >;); out meta qt;" \
+  -d "data=(node(-17.821343531895728, 30.904111862182614, -17.778602961844793, 30.95578193664551); <; >>;); out meta qt;" \
   http://overpass-api.de/api/interpreter > dvizarasekwa.osm
 ```
 
