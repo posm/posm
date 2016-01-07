@@ -114,7 +114,7 @@ Description | Status | Notes | Owner
 
 Description | Automated | Status | Notes | Owner
 ----------- | --------- | ------ | ----- | -----
-1. Create form from XLS | :computer: | :sunny: | Working, bare-bones UI | Needs deep though regarding constraints. | 
+1. Create form from XLS | :computer: | :cloud: | Working, bare-bones UI | Needs deep thought regarding constraints. | 
 2. Declare a deployment | :hand: | :cloud: | We have a very basic notion of a `manifest.json` for a job service | 
 3. Serve a deployment to client | :computer: | :cloud: | The UI for this will be in the Android app, just starting that... | 
 4. Serve forms to client | :computer: | :sunny: | Done. | 
@@ -126,11 +126,11 @@ Description | Automated | Status | Notes | Owner
 
 Description | Automated | Status | Notes | Owner
 ----------- | --------- | ------ | ----- | -----
-1. Get deployment | :hand: | :cloud: | Getting started creating UI and tasks to get deployment from server |
+1. Get deployment | :hand: | :bomb: | Getting started creating UI and tasks to get deployment from server |
 2. Get ODK Forms | :computer: | :sunny: | |
 3. Integrate as plugin with ODK in survey workflow | :computer: | :sunny: | 
 4. Select, tag, create POI | :computer: | :sunny: | 
-5. Submit to server | :comptuer: | :sunny: |
+5. Submit to server | :computer: | :sunny: |
 
 
 ## Sync ↓
