@@ -110,7 +110,28 @@ Description | Status | Notes | Owner
 
 ## OpenMapKit
 
-**TBD**
+### Server
+
+Description | Automated | Status | Notes | Owner
+----------- | --------- | ------ | ----- | -----
+1. Create form from XLS | :computer: | :sunny: | Working, bare-bones UI | Needs deep though regarding constraints. | 
+2. Declare a deployment | :hand: | :cloud: | We have a very basic notion of a `manifest.json` for a job service | 
+3. Serve a deployment to client | :computer: | :cloud: | The UI for this will be in the Android app, just starting that... | 
+4. Serve forms to client | :computer: | :sunny: | Done. | 
+5. Receive submissions and write to file system | :computer: | :sunny: | Done. | 
+6. Aggregate / Export ODK submissions | :computer: | :cloud: | We don't have filters for that (not important now) | 
+7. Export OSM Submissions | :computer: | :cloud: | API is done, filters and aggregates. Needs web UI |
+
+### Android
+
+Description | Automated | Status | Notes | Owner
+----------- | --------- | ------ | ----- | -----
+1. Get deployment | :hand: | :cloud: | Getting started creating UI and tasks to get deployment from server |
+2. Get ODK Forms | :computer: | :sunny: | |
+3. Integrate as plugin with ODK in survey workflow | :computer: | :sunny: | 
+4. Select, tag, create POI | :computer: | :sunny: | 
+5. Submit to server | :comptuer: | :sunny: |
+
 
 ## Sync ↓
 
