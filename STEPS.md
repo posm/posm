@@ -99,3 +99,25 @@ Locally-rendered tiles will now be available at
 [`posm.local/tl/#16/-17.7990/30.9290`](http://posm.local/tl/#16/-17.799/30.929)
 (again, hostname dependent on your configuration). The location in the URL hash
 is required until the map style is correctly configured with a center.
+
+## Field Papers
+
+Adjust hostnames (if necessary) and add AWS keys / bucket info to
+`/etc/init/fp-{tasks,tiler,web}.conf`. (Yes, AWS keys imply internet access;
+working on that.)
+
+Restart Field Papers services:
+
+```bash
+sudo service fp-tasks restart
+sudo service fp-tiler restart
+sudo service fp-web restart
+```
+
+Field Papers will now be available at [`posm.local/fp`](http://posm.local/fp).
+
+### Atlas Generation
+
+When selecting an area, use `http://posm.local/tl/{z}/{x}/{y}.png` as the tile
+source in order to use locally-rendered tiles. If you'd like to use the OSM
+extract, use `http://posm.local/osm/{z}/{x}/{y}.png`.

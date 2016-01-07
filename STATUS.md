@@ -82,8 +82,8 @@ Description | Status | Notes | Owner
 
 Description | Automated | Status | Notes | Owner
 ----------- | --------- | ------ | ----- | -----
-1. Generate PDF | :hand: | :bomb: | fp-legacy / fp-tasks |
-2. Download, print, and annotate | :hand: | :bomb: | |
+1. Generate PDF | :hand: | :cloud: | fp-legacy / fp-tasks |
+2. Download, print, and annotate | :hand: | :cloud: | |
 3. Upload | :hand: | :bomb: | fp-legacy / fp-tasks |
 4. Trace in iD | :hand: | :cloud: | static iD, fp-tiler |
 
@@ -91,7 +91,7 @@ Description | Automated | Status | Notes | Owner
 
 Description | Status | Notes | Owner
 ----------- | ------ | ----- | -----
-1. HTTP-accessible PDF | :bomb: | |
+1. HTTP-accessible PDF | :cloud: | |
 2. HTTP-accessible snapshot GeoTIFF | :bomb: | |
 3. HTTP-accessible snapshot tiles | :bomb: | `fp-tiler` |
 
