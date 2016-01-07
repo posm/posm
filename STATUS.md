@@ -17,13 +17,13 @@ both in terms of software installed and configured and data made available.
 
 ## Misc. Cloud Services
 
-Description | Status | Notes | Owner 
+Description | Status | Notes | Owner
 ----------- | ------ | ----- | -----
 1. Data gatherer | :bomb: | **TBD**, HOT Export Tool? |
 
 ## Misc. Device Services
 
-Description | Status | Notes | Owner 
+Description | Status | Notes | Owner
 ----------- | ------ | ----- | -----
 1. Static iD assets | :bomb: | |
 2. Field Papers | :cloud: | |
@@ -36,29 +36,29 @@ Description | Status | Notes | Owner
 
 ## Initial Data Gathering
 
-Description | Automated | Status | Notes | Owner 
------------ | --------- | ------ | ----- | -----
-1. PBF Extract | :hand: | :bomb: | Can be done directly or using the [HOT Export Tool](http://export.hotosm.org/) with an arbitrary file format |
-1a. Overpass → XML | :hand: | :bomb: | |
-1b. XML → PBF conversion | :hand: | :bomb: | Osmosis |
-2. MBTiles creation | :hand: | :bomb: | [tl](https://github.com/mojodna/tl) or [mbtiles-generate](https://github.com/AmericanRedCross/mbtiles-generate) (which uses `tl` internally) |
+Description | Automated | Status | Notes | Owner | Issues
+----------- | --------- | ------ | ----- | ----- | ------
+1. PBF Extract | :hand: | :bomb: | Can be done directly or using the [HOT Export Tool](http://export.hotosm.org/) with an arbitrary file format | |
+1a. Overpass → XML | :hand: | :bomb: | | |
+1b. XML → PBF conversion | :hand: | :bomb: | Osmosis | |
+2. MBTiles creation | :hand: | :bomb: | [tl](https://github.com/mojodna/tl) or [mbtiles-generate](https://github.com/AmericanRedCross/mbtiles-generate) (which uses `tl` internally) | | [tl#15](https://github.com/mojodna/tl/issues/15)
 
 ### Outputs
 
-Description | Status | Notes | Owner 
+Description | Status | Notes | Owner
 ----------- | ------ | ----- | -----
 1. AOI data package | :bomb: | HTTP-accessible, contains PBF + MBTiles (styles TBD) for the AOI |
 
 ## Initial Device Data Provisioning
 
-Description | Automated | Status | Notes | Owner 
+Description | Automated | Status | Notes | Owner
 ----------- | --------- | ------ | ----- | -----
 1. Download data package | :hand: | :bomb: | Target path: **TBD** |
-2. Extract MBTiles | :hand: | :bomb: | Target path: **TBD** |
-3. Extract PBF | :hand: | :bomb: | Target path: **TBD** |
+2. Extract MBTiles | :hand: | :cloud: | Target path: **TBD** |
+3. Extract PBF | :hand: | :cloud: | Target path: **TBD** |
 4. Populate APIDB<sup>1</sup> | :hand: | :bomb: | Osmosis |
 5. Populate rendering DB | :hand: | :cloud: | `osm2pgsql` |
-6. Restart tile server(s) | :hand: | :bomb: | |
+6. Restart tile server(s) | :hand: | :cloud: | |
 
 1. To populate the APIDB (using scripts from [macrocosm](https://github.com/americanredcross/macrocosm)):
 
@@ -73,23 +73,23 @@ osmosis \
 
 ### Outputs
 
-Description | Status | Notes | Owner 
+Description | Status | Notes | Owner
 ----------- | ------ | -----| -----
-1. HTTP-accessible tiles | :bomb: | From MBTiles archive(s) |
-2. HTTP-accessible tiles | :bomb: | From MBTiles archive(s) |
+1. HTTP-accessible tiles | :cloud: | From MBTiles archive(s) |
+2. HTTP-accessible tiles | :cloud: | Live rendered |
 
 ## Field Papers
 
-Description | Automated | Status | Notes | Owner 
+Description | Automated | Status | Notes | Owner
 ----------- | --------- | ------ | ----- | -----
 1. Generate PDF | :hand: | :bomb: | fp-legacy / fp-tasks |
 2. Download, print, and annotate | :hand: | :bomb: | |
-3. Upload | :hand: | :bomb: | fp-legacy / fp-tasks | 
+3. Upload | :hand: | :bomb: | fp-legacy / fp-tasks |
 4. Trace in iD | :hand: | :cloud: | static iD, fp-tiler |
 
 ### Outputs
 
-Description | Status | Notes | Owner 
+Description | Status | Notes | Owner
 ----------- | ------ | ----- | -----
 1. HTTP-accessible PDF | :bomb: | |
 2. HTTP-accessible snapshot GeoTIFF | :bomb: | |
@@ -97,15 +97,15 @@ Description | Status | Notes | Owner
 
 ## OSM Editing
 
-Description | Automated | Status | Notes | Owner 
+Description | Automated | Status | Notes | Owner
 ----------- | --------- | ------ | ----- | -----
-1. Load data | :hand: | :bomb: | macrocosm | 
+1. Load data | :hand: | :bomb: | macrocosm |
 2. Save changes | :hand: | :bomb: | macrocosm |
 
 ### Outputs
 
-Description | Status | Notes | Owner 
------------ | ------ | ----- | ----- 
+Description | Status | Notes | Owner
+----------- | ------ | ----- | -----
 1. Changesets | :bomb: | Inherently in the APIDB, but maybe we want files at this stage too |
 
 ## OpenMapKit
