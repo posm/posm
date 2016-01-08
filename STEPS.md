@@ -13,10 +13,10 @@ nvm use 5
 npm install tl tilelive-http mbtiles
 node_modules/.bin/tl copy \
   http://a.tile.openstreetmap.org/{z}/{x}/{y}.png \
-  mbtiles://./osm_dvizarasekwa_z14-20.mbtiles \
+  mbtiles://./osm_dvizarasekwa_z14-19.mbtiles \
   -b "30.904111862182614 -17.821343531895728 30.95578193664551 -17.778602961844793" \
   -z 14 \
-  -Z 20
+  -Z 19
 ```
 
 ### Fetch OSM XML
@@ -40,7 +40,7 @@ osmosis --read-xml dvizarasekwa.osm --wb dvizarasekwa.pbf
 sudo -s
 mkdir -p /opt/data/tiles
 mkdir -p /opt/data/osm
-mv /path/to/dvizarasekwa_z14-20.mbtiles /opt/data/tiles
+mv /path/to/dvizarasekwa_z14-19.mbtiles /opt/data/tiles
 mv /path/to/dvizarasekwa.pbf /opt/data/osm
 ```
 
@@ -73,7 +73,7 @@ sudo -s
 cat <<EOF > /etc/tessera.conf.json
 {
   "/tl": "mapnik://./project.xml",
-  "/osm": "mbtiles:///opt/data/tiles/osm_dvizarasekwa_z14-20.mbtiles"
+  "/osm": "mbtiles:///opt/data/tiles/osm_dvizarasekwa_z14-19.mbtiles"
 }
 EOF
 service tessera restart
