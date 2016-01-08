@@ -84,16 +84,16 @@ Description | Automated | Status | Notes | Owner
 ----------- | --------- | ------ | ----- | -----
 1. Generate PDF | :hand: | :cloud: | fp-legacy / fp-tasks |
 2. Download, print, and annotate | :hand: | :cloud: | |
-3. Upload | :hand: | :bomb: | fp-legacy / fp-tasks |
-4. Trace in iD | :hand: | :cloud: | static iD, fp-tiler |
+3. Upload | :hand: | :cloud: | fp-legacy / fp-tasks |
+4. Trace in iD | :hand: | :bomb: | static iD, fp-tiler |
 
 ### Outputs
 
-Description | Status | Notes | Owner
------------ | ------ | ----- | -----
-1. HTTP-accessible PDF | :cloud: | |
-2. HTTP-accessible snapshot GeoTIFF | :bomb: | |
-3. HTTP-accessible snapshot tiles | :bomb: | `fp-tiler` |
+Description | Status | Notes | Owner | Issues
+----------- | ------ | ----- | ----- | ------
+1. HTTP-accessible PDF | :cloud: | | |
+2. HTTP-accessible snapshot GeoTIFF | :cloud: | | |
+3. HTTP-accessible snapshot tiles | :bomb: | `fp-tiler` | | [fieldpapers#202](https://github.com/fieldpapers/fieldpapers/issues/202)
 
 ## OSM Editing
 
@@ -140,7 +140,7 @@ Description | Automated | Status | Notes | Owner
 1. Regenerate AOI data package | :hand: | :bomb: |  
 2. Download data package | :hand: | :bomb: | Target path: **TBD**  |
 3. Extract PBF | :hand: | :bomb: | Target path: **TBD**  |
-4. Extract MBTiles | :hand: | :cloud: | Target path: **TBD**  |
+4. Extract MBTiles | :hand: | :bomb: | Target path: **TBD**  |
 
 ## Sync ↑
 
