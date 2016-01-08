@@ -49,6 +49,18 @@ throughout POSM.
 * **Response** (OpenMapKit) - Collected metadata for an individual feature
   within a _survey area_.
 
+## Hardware
+
+Our initial hardware target is an Intel NUC w/ a 256GB SSD and 8GB of RAM.
+Initial measurements show it drawing less than 10W. It can also operate on a
+range of voltages between 12-19V. The spec'd components (below) run about USD
+~$300.
+
+* [NUC Kit - BOXNUC5PPYH](http://smile.amazon.com/gp/product/B00XPVQHDU) - 2.6
+  GHz quad core Pentium (N3700, 6W TDP). Includes a basic case.
+* [Samsung 850 EVO 250GB](http://smile.amazon.com/gp/product/B00OAJ412U)
+* [8GB 1600MHz DDR3L CL9 SODIMM](http://smile.amazon.com/gp/product/B00KQCOTCM)
+
 ## Project-related Repositories
 
 POSM is an aggregation of tools that are used in field enumeration and
