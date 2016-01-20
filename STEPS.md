@@ -118,7 +118,18 @@ been downloaded and handles `contents` and `derivatives` accordingly.
 
 ### Populate APIDB
 
-**TBD** (requires macrocosm)
+Assuming that an APIDB was already populated, it will need to be dropped and
+recreated in order to avoid duplicate key errors:
+
+```bash
+sudo -u postgres dropdb macrocosm_production
+sudo -u postgres createdb --owner macrocosm macrocosm_production
+sudo -u postgres psql -d macrocosm_production -c "CREATE EXTENSION btree_gist"
+sudo -u macrocosm psql -d macrocosm_production -f /opt/macrocosm/db-server/script/macrocosm-db.sql
+sudo -u macrocosm osmosis --read-pbf-fast /opt/data/osm/dvizarasekwa.pbf \
+  --log-progress \
+  --write-apidb password=macrocosm database=macrocosm_production
+```
 
 ### Populate Rendering DB
 
