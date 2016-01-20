@@ -34,6 +34,10 @@ curl -XPOST \
 osmosis --read-xml dvizarasekwa.osm --wb dvizarasekwa.pbf
 ```
 
+### Obtain XLS Form
+
+Initial version of ODK Collect survey.
+
 ## Initial Data Deployment
 
 ```bash
