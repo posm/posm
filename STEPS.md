@@ -38,6 +38,71 @@ osmosis --read-xml dvizarasekwa.osm --wb dvizarasekwa.pbf
 
 Initial version of ODK Collect survey.
 
+### Create a data manifest describing everything
+
+* References to outputs from above
+* (Local) path to XLS (within archive)
+* (Local) path(s) to MBTiles
+* (Local) path to OSM PBF
+* Bounding box
+* Name
+* Imagery sources w/ zoom levels
+
+(Styles are sketched out here, but we don't intend to use them in the short-term.)
+
+E.g.:
+
+```json
+{
+  "name": "Dvizarasekwa, Zimbabwe",
+  "description": "",
+  "bbox": [30.904111862182614, -17.821343531895728, 30.95578193664551, -17.778602961844793],
+  "contents": {
+    "tiles/osm_dvizarasekwa_z14-19.mbtiles": {
+      "type": "MBTiles",
+      "minzoom": 14,
+      "maxzoom": 19,
+      "bbox": "(optional to override the overall bbox)",
+      "source": "http://tile.openstreetmap.org/{z}/{x}/{y}.png"
+    },
+    "tiles/satellite_dvizarasekwa_z14-19.mbtiles": {
+      "type": "MBTiles",
+      "minzoom": 14,
+      "maxzoom": 19,
+      "bbox": "(optional to override the overall bbox)",
+      "source": "http://tile.digitalglobe.com/something/{z}/{x}/{y}.png"
+    },
+    "odk/form.xls": {
+      "type": "ODKForm"
+    },
+    "osm/dvizarasekwa.pbf": {
+      "type": "OSM/PBF"
+    },
+    "styles/hdm.xml": {
+      "type": "Mapnik/XML"
+    },
+    "styles/minimal.yaml": {
+      "type": "Mapnik/YAML"
+    }
+  },
+  "derivatives": {
+    "Buildings and Roads": {
+      "type": "OSM/XML",
+      "bbox": "(optional, to restrict area covered)",
+      "filters": [
+        "building=*",
+        "highway=*"
+      ]
+    },
+    "HDM Tiles": {
+      "type": "MBTiles",
+      "bbox": "(optional)",
+      "source": "mapnik://styles/hdm.xml"
+    }
+  }
+}
+```
+
 ## Initial Data Deployment
 
 ```bash
