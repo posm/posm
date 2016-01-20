@@ -113,6 +113,9 @@ mv /path/to/dvizarasekwa_z14-19.mbtiles /opt/data/tiles
 mv /path/to/dvizarasekwa.pbf /opt/data/osm
 ```
 
+To be replaced by something that reads the data manifest from the archive that's
+been downloaded and handles `contents` and `derivatives` accordingly.
+
 ### Populate APIDB
 
 **TBD** (requires macrocosm)
