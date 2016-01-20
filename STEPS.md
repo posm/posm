@@ -144,31 +144,19 @@ sudo -u gis \
 sudo -s
 cat <<EOF > /etc/tessera.conf.json
 {
-  "/tl": "mapnik://./project.xml",
-  "/osm": "mbtiles:///opt/data/tiles/osm_dvizarasekwa_z14-19.mbtiles"
+  "/tiles/mm": "mapnik://./project.xml",
+  "/tiles/osm": "mbtiles:///opt/data/tiles/osm_dvizarasekwa_z14-19.mbtiles"
 }
 EOF
 service tessera restart
 ```
 
-Add this to `/etc/nginx/sites-enabled/posm` to proxy OSM tiles:
-
-```
-location /osm {
-  proxy_pass http://127.0.0.1:8082;
-}
-```
-
-```bash
-sudo service nginx restart
-```
-
-OSM tiles will now be available at [`posm.local/osm/`](http://posm.local/osm/)
-(hostname dependent on your configuration). It will auto-center to the center of
-the deployment AOI.
+OSM tiles will now be available at
+[`posm.local/tiles/osm/`](http://posm.local/tiles/osm/) (hostname dependent on
+your configuration). It will auto-center to the center of the deployment AOI.
 
 Locally-rendered tiles will now be available at
-[`posm.local/tl/#16/-17.7990/30.9290`](http://posm.local/tl/#16/-17.799/30.929)
+[`posm.local/tiles/mm/#16/-17.7990/30.9290`](http://posm.local/tiles/mm/#16/-17.799/30.929)
 (again, hostname dependent on your configuration). The location in the URL hash
 is required until the map style is correctly configured with a center.
 
@@ -190,6 +178,6 @@ Field Papers will now be available at [`posm.local/fp`](http://posm.local/fp).
 
 ### Atlas Generation
 
-When selecting an area, use `http://posm.local/tl/{z}/{x}/{y}.png` as the tile
-source in order to use locally-rendered tiles. If you'd like to use the OSM
-extract, use `http://posm.local/osm/{z}/{x}/{y}.png`.
+When selecting an area, use `http://posm.local/tiles/mm/{z}/{x}/{y}.png` as the
+tile source in order to use locally-rendered tiles. If you'd like to use the OSM
+extract, use `http://posm.local/tiles/osm/{z}/{x}/{y}.png`.
