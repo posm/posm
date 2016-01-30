@@ -173,22 +173,37 @@ is required until the map style is correctly configured with a center.
 
 ## Field Papers
 
-Adjust hostnames (if necessary) and add AWS keys / bucket info to
-`/etc/init/fp-{tasks,tiler,web}.conf`. (Yes, AWS keys imply internet access;
-working on that.)
+### Configuration
 
-Restart Field Papers services:
+Edit `/opt/fp/fp-web/config/providers.json` to include all locally-available
+tilesets. (The key `openstreetmap` is special at the moment and treated as
+though whichever style is defined beneath it is the default.) E.g.:
 
-```bash
-sudo service fp-tasks restart
-sudo service fp-tiler restart
-sudo service fp-web restart
+```json
+{
+  "openstreetmap": {
+    "label": "OpenStreetMap",
+    "template": "http://posm.local/tiles/osm/{Z}/{X}/{Y}.png",
+    "options": {
+      "attribution": ""
+    },
+    "minzoom": 0,
+    "maxzoom": 19
+  },
+  "mm": {
+    "label": "Missing Maps",
+    "template": "http://posm.local/tiles/mm/{Z}/{X}/{Y}.png",
+    "options": {
+      "attribution": ""
+    },
+    "minzoom": 0,
+    "maxzoom": 24
+  }
+}
 ```
 
-Field Papers will now be available at [`posm.local/fp`](http://posm.local/fp).
+Edit `/etc/init/fp-web.conf` to set `DEFAULT_CENTER`:
 
-### Atlas Generation
-
-When selecting an area, use `http://posm.local/tiles/mm/{z}/{x}/{y}.png` as the
-tile source in order to use locally-rendered tiles. If you'd like to use the OSM
-extract, use `http://posm.local/tiles/osm/{z}/{x}/{y}.png`.
+```bash
+env DEFAULT_CENTER="15/-17.8086/30.9282" # <zoom>/<latitude>/<longitude>
+```
