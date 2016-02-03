@@ -207,3 +207,9 @@ Edit `/etc/init/fp-web.conf` to set `DEFAULT_CENTER`:
 ```bash
 env DEFAULT_CENTER="15/-17.8086/30.9282" # <zoom>/<latitude>/<longitude>
 ```
+
+Restart `fp-web`:
+
+```bash
+service fp-web restart
+```
