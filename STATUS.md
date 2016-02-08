@@ -25,14 +25,15 @@ Description | Status | Notes | Owner | For Ecuador
 
 Description | Status | Notes | Owner | For Ecuador
 ----------- | ------ | ----- | ----- | ---------
-1. Static iD assets | :cloud: | | | Yes
-2. Field Papers | :cloud: | | | Yes
-3. OMK Server | :cloud: | | |  Yes
-4. OSM API | :bomb: | macrocosm | | Yes
-5. Captive Portal | :bomb: | **TBD** | | No
-6. WiFi | :bomb: | `hostapd` | | Maybe
-7. MBTiles server | :cloud: | `tessera` | | Yes
-8. Tile renderer | :cloud: | `tessera` | | Yes
+1. Static iD assets | :sunny: | | | Yes
+2. Field Papers | :sunny: | | | Yes
+3. OMK Server | :sunny: | | |  Yes
+4. OSM API | :sunny: | openstreetmap-website, CGImap | | Yes
+5. Captive Portal | :sunny: | `dnsmasq` | | Yes
+6. WiFi | :sunny: | `hostapd` | | Yes
+7. MBTiles server | :sunny: | `tessera` | | Yes
+8. Tile renderer | :sunny: | `tessera` | | Yes
+9. Device admin | :bomb: | **TBD** | | No
 
 ## Initial Data Gathering
 
@@ -75,32 +76,32 @@ osmosis \
 
 Description | Status | Notes | Owner | For Ecuador
 ----------- | ------ | -----| ----- | -------
-1. HTTP-accessible tiles | :cloud: | From MBTiles archive(s) | | Yes
-2. HTTP-accessible tiles | :cloud: | Live rendered | | Maybe
+1. HTTP-accessible tiles | :sunny: | From MBTiles archive(s) | | Yes
+2. HTTP-accessible tiles | :sunny: | Live rendered | | Maybe
 
 ## Field Papers
 
 Description | Automated | Status | Notes | Owner | For Ecuador
 ----------- | --------- | ------ | ----- | ----- | -------
-1. Generate PDF | :hand: | :cloud: | fp-legacy / fp-tasks | | Yes
-2. Download, print, and annotate | :hand: | :cloud: | | | Yes
-3. Upload | :hand: | :cloud: | fp-legacy / fp-tasks | | Yes
-4. Trace in iD | :hand: | :bomb: | static iD, fp-tiler | | Maybe, depends on how/whether changesets can be extracted from the APIDB.
+1. Generate PDF | :hand: | :sunny: | fp-legacy / fp-tasks | | Yes
+2. Download, print, and annotate | :hand: | :sunny: | | | Yes
+3. Upload | :hand: | :sunny: | fp-legacy / fp-tasks | | Yes
+4. Trace in iD | :hand: | :cloud: | static iD, fp-tiler | | Maybe, depends on how/whether changesets can be extracted from the APIDB.
 
 ### Outputs
 
 Description | Status | Notes | Owner | Issues | For Ecudador
 ----------- | ------ | ----- | ----- | ------ | -------
-1. HTTP-accessible PDF | :cloud: | | | | Yes
-2. HTTP-accessible snapshot GeoTIFF | :cloud: | | | | Yes
-3. HTTP-accessible snapshot tiles | :cloud: | `fp-tiler` | | | Yes
+1. HTTP-accessible PDF | :sunny: | | | | Yes
+2. HTTP-accessible snapshot GeoTIFF | :sunny: | | | | Yes
+3. HTTP-accessible snapshot tiles | :sunny: | `fp-tiler` | | | Yes
 
 ## OSM Editing
 
 Description | Automated | Status | Notes | Owner | For Ecuador
 ----------- | --------- | ------ | ----- | ----- | ------
-1. Load data | :hand: | :bomb: | macrocosm | | Maybe
-2. Save changes | :hand: | :bomb: | macrocosm | | Maybe
+1. Load data | :hand: | :cloud: | openstreetmap-website | | Maybe
+2. Save changes | :hand: | :cloud: | openstreetmap-website | | Maybe
 
 ### Outputs
 
