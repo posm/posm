@@ -123,8 +123,8 @@ recreated in order to avoid duplicate key errors:
 
 ```bash
 sudo -u postgres dropdb osm
-su - postgres -c "createdb --owner='$osm_pg_owner' '$osm_pg_dbname'"
-su - postgres -c "psql --dbname='$osm_pg_dbname' --command='CREATE EXTENSION btree_gist'"
+su - postgres -c "createdb --owner='osm' 'osm'"
+su - postgres -c "psql --dbname='osm' --command='CREATE EXTENSION btree_gist'"
 
 su - osm -c "cd 'opt/osm/osm-web/db/functions' && make libpgosm.so"
 su - postgres -c "psql -d osm -c \"CREATE FUNCTION maptile_for_point(int8, int8, int4) RETURNS int4 AS '/opt/osm/osm-web/db/functions/libpgosm', 'maptile_for_point' LANGUAGE C STRICT\""
@@ -133,6 +133,20 @@ su - postgres -c "psql -d $osm_pg_dbname -c \"CREATE FUNCTION xid_to_int4(xid) R
 
 su - osm -c "cd '/opt/osm/osm-web' && bundle exec rake db:migrate"
 
+sudo -u osm osmosis --read-pbf-fast /opt/data/osm/dvizarasekwa.pbf \
+  --log-progress \
+  --write-apidb password=openstreetmap database=osm
+  
+su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('changesets_id_seq', (select max(id) from changesets))\""
+su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_nodes_id_seq', (select max(node_id) from nodes))\""
+su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_ways_id_seq', (select max(way_id) from ways))\""
+su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_relations_id_seq', (select max(relation_id) from relations))\""
+su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('users_id_seq', (select max(id) from users))\""
+```
+
+If an APIDB was not already populated, you can this instead:
+
+```bash
 sudo -u osm osmosis --read-pbf-fast /opt/data/osm/dvizarasekwa.pbf \
   --log-progress \
   --write-apidb password=openstreetmap database=osm
