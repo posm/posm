@@ -4,7 +4,7 @@ For the purpose of these steps, we're provisioning data for a past project in
 Dvizarasekwa, Zimbabwe. The _Deployment AOI_ is `[30.904111862182614,
 -17.821343531895728, 30.95578193664551, -17.778602961844793]`.
 
-## Initial Data Gathering
+## Initial Data Gathering (cloud)
 
 ### Generate MBTiles
 
@@ -103,7 +103,7 @@ E.g.:
 }
 ```
 
-## Initial Data Deployment
+## Initial Data Deployment (device)
 
 ```bash
 sudo -s
