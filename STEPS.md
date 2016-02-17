@@ -137,11 +137,11 @@ sudo -u osm osmosis --read-pbf-fast /opt/data/osm/dvizarasekwa.pbf \
   --log-progress \
   --write-apidb password=openstreetmap database=osm validateSchemaVersion=no
   
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('changesets_id_seq', (select max(id) from changesets))\""
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_nodes_id_seq', (select max(node_id) from nodes))\""
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_ways_id_seq', (select max(way_id) from ways))\""
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_relations_id_seq', (select max(relation_id) from relations))\""
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('users_id_seq', (select max(id) from users))\""
+su - osm -c "psql -d osm -c \"select setval('changesets_id_seq', (select max(id) from changesets))\""
+su - osm -c "psql -d osm -c \"select setval('current_nodes_id_seq', (select max(node_id) from nodes))\""
+su - osm -c "psql -d osm -c \"select setval('current_ways_id_seq', (select max(way_id) from ways))\""
+su - osm -c "psql -d osm -c \"select setval('current_relations_id_seq', (select max(relation_id) from relations))\""
+su - osm -c "psql -d osm -c \"select setval('users_id_seq', (select max(id) from users))\""
 ```
 
 If an APIDB was not already populated, you can this instead:
@@ -151,11 +151,11 @@ sudo -u osm osmosis --read-pbf-fast /opt/data/osm/dvizarasekwa.pbf \
   --log-progress \
   --write-apidb password=openstreetmap database=osm validateSchemaVersion=no
   
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('changesets_id_seq', (select max(id) from changesets))\""
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_nodes_id_seq', (select max(node_id) from nodes))\""
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_ways_id_seq', (select max(way_id) from ways))\""
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_relations_id_seq', (select max(relation_id) from relations))\""
-su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('users_id_seq', (select max(id) from users))\""
+su - osm -c "psql -d osm -c \"select setval('changesets_id_seq', (select max(id) from changesets))\""
+su - osm -c "psql -d osm -c \"select setval('current_nodes_id_seq', (select max(node_id) from nodes))\""
+su - osm -c "psql -d osm -c \"select setval('current_ways_id_seq', (select max(way_id) from ways))\""
+su - osm -c "psql -d osm -c \"select setval('current_relations_id_seq', (select max(relation_id) from relations))\""
+su - osm -c "psql -d osm -c \"select setval('users_id_seq', (select max(id) from users))\""
 ```
 
 ### Populate Rendering DB
