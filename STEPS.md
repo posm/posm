@@ -135,7 +135,7 @@ su - osm -c "cd '/opt/osm/osm-web' && bundle exec rake db:migrate"
 
 sudo -u osm osmosis --read-pbf-fast /opt/data/osm/dvizarasekwa.pbf \
   --log-progress \
-  --write-apidb password=openstreetmap database=osm
+  --write-apidb password=openstreetmap database=osm validateSchemaVersion=no
   
 su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('changesets_id_seq', (select max(id) from changesets))\""
 su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_nodes_id_seq', (select max(node_id) from nodes))\""
@@ -149,7 +149,7 @@ If an APIDB was not already populated, you can this instead:
 ```bash
 sudo -u osm osmosis --read-pbf-fast /opt/data/osm/dvizarasekwa.pbf \
   --log-progress \
-  --write-apidb password=openstreetmap database=osm
+  --write-apidb password=openstreetmap database=osm validateSchemaVersion=no
   
 su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('changesets_id_seq', (select max(id) from changesets))\""
 su - osm -c "psql -d ${osm_pg_dbname} -c \"select setval('current_nodes_id_seq', (select max(node_id) from nodes))\""
