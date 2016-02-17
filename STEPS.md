@@ -97,6 +97,8 @@ E.g.:
     "HDM Tiles": {
       "type": "MBTiles",
       "bbox": "(optional)",
+      "minZoom": 14,
+      "maxZoom": 19,
       "source": "mapnik://styles/hdm.xml"
     }
   }
