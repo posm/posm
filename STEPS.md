@@ -126,7 +126,7 @@ sudo -u postgres dropdb osm
 su - postgres -c "createdb --owner='osm' 'osm'"
 su - postgres -c "psql --dbname='osm' --command='CREATE EXTENSION btree_gist'"
 
-su - osm -c "cd 'opt/osm/osm-web/db/functions' && make libpgosm.so"
+su - osm -c "cd '/opt/osm/osm-web/db/functions' && make libpgosm.so"
 su - postgres -c "psql -d osm -c \"CREATE FUNCTION maptile_for_point(int8, int8, int4) RETURNS int4 AS '/opt/osm/osm-web/db/functions/libpgosm', 'maptile_for_point' LANGUAGE C STRICT\""
 su - postgres -c "psql -d osm -c \"CREATE FUNCTION tile_for_point(int4, int4) RETURNS int8 AS '/opt/osm/osm-web/db/functions/libpgosm', 'tile_for_point' LANGUAGE C STRICT\""
 su - postgres -c "psql -d osm -c \"CREATE FUNCTION xid_to_int4(xid) RETURNS int4 AS '/opt/osm/osm-web/db/functions/libpgosm', 'xid_to_int4' LANGUAGE C STRICT\""
