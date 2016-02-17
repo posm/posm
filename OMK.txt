@@ -1,0 +1,74 @@
+ sudo -s
+ mkdir -p "/opt/omk/OpenMapKitServer/public/deployments/Dvizarasekwa, Zimbabwe"
+ 
+ cat <<EOF > "/opt/omk/OpenMapKitServer/public/deployments/Dvizarasekwa, Zimbabwe/manifest.json"
+{
+  "name": "Dvizarasekwa, Zimbabwe",
+  "description": "This is an example deployment that looks at an area the Red Cross covered on the first ever OpenMapKit field servey.",
+  "bbox": [30.904111862182614, -17.821343531895728, 30.95578193664551, -17.778602961844793],
+  "contents": {
+    "tiles/osm_dvizarasekwa_z14-19.mbtiles": {
+      "type": "MBTiles",
+      "minzoom": 14,
+      "maxzoom": 19,
+      "bbox": "(optional to override the overall bbox)",
+      "source": "http://tile.openstreetmap.org/{z}/{x}/{y}.png"
+    },
+    "tiles/satellite_dvizarasekwa_z14-19.mbtiles": {
+      "type": "MBTiles",
+      "minzoom": 14,
+      "maxzoom": 19,
+      "bbox": "(optional to override the overall bbox)",
+      "source": "http://tile.digitalglobe.com/something/{z}/{x}/{y}.png"
+    },
+    "odk/form.xls": {
+      "type": "ODKForm"
+    },
+    "osm/dvizarasekwa.pbf": {
+      "type": "OSM/PBF"
+    },
+    "styles/hdm.xml": {
+      "type": "Mapnik/XML"
+    },
+    "styles/minimal.yaml": {
+      "type": "Mapnik/YAML"
+    }
+  },
+  "derivatives": {
+    "Buildings": {
+      "type": "OSM/XML",
+      "bbox": "(optional, to restrict area covered)",
+      "filters": [
+        "building=*",
+        "highway=*"
+      ]
+    },
+    "HDM Tiles": {
+      "type": "MBTiles",
+      "bbox": "(optional)",
+      "source": "mapnik://styles/hdm.xml"
+    }
+  }
+}
+EOF
+
+ln -s /opt/data/tiles/osm_dvizarasekwa_z14-19.mbtiles "/opt/omk/OpenMapKitServer/public/deployments/Dvizarasekwa, Zimbabwe/osm_dvizarasekwa_z14-19.mbtiles"
+
+chmod -R a+rwx /opt/data/tiles/
+su - gis
+curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
+nvm install 5
+nvm use 5
+npm install tl tilelive-mapnik mbtiles
+node_modules/.bin/tl copy \
+  mapnik:///opt/gis/posm-carto/project.xml \
+  mbtiles:///opt/data/tiles/mm_dvizarasekwa_z14-19.mbtiles \
+  -b "30.904111862182614 -17.821343531895728 30.95578193664551 -17.778602961844793" \
+  -z 14 \
+  -Z 19
+
+exit
+ln -s /opt/data/tiles/mm_dvizarasekwa_z14-19.mbtiles "/opt/omk/OpenMapKitServer/public/deployments/Dvizarasekwa, Zimbabwe/mm_dvizarasekwa_z14-19.mbtiles"
+
+
+osmosis --read-pbf /opt/data/osm/dvizarasekwa.pbf --tf accept-ways building=* --used-node --write-xml "/opt/omk/OpenMapKitServer/public/deployments/Dvizarasekwa, Zimbabwe/dvizarasekwa.osm"
