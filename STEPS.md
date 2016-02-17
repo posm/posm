@@ -182,7 +182,7 @@ sudo -u gis \
 sudo -s
 cat <<EOF > /etc/tessera.conf.json
 {
-  "/tiles/mm": "mapnik://./project.xml",
+  "/tiles/mm": "mapnik://./posm-carto/project.xml",
   "/tiles/osm": "mbtiles:///opt/data/tiles/osm_dvizarasekwa_z14-19.mbtiles"
 }
 EOF
