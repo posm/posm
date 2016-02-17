@@ -86,7 +86,7 @@ Description | Automated | Status | Notes | Owner | For Ecuador
 1. Generate PDF | :hand: | :sunny: | fp-legacy / fp-tasks | | Yes
 2. Download, print, and annotate | :hand: | :sunny: | | | Yes
 3. Upload | :hand: | :sunny: | fp-legacy / fp-tasks | | Yes
-4. Trace in iD | :hand: | :cloud: | static iD, fp-tiler | | Maybe, depends on how/whether changesets can be extracted from the APIDB.
+4. Trace in iD | :hand: | :cloud: | static iD, fp-tiler. Note: to edit, one needs to be registered and logged into the local OSM instance (/osm) | | Maybe, depends on how/whether changesets can be extracted from the APIDB.
 
 ### Outputs
 
