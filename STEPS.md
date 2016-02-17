@@ -100,6 +100,13 @@ E.g.:
       "minZoom": 14,
       "maxZoom": 19,
       "source": "mapnik://styles/hdm.xml"
+    },
+    "OSM Vector Tiles": {
+      "type": "MBTiles",
+      "bbox": "(optional)",
+      "minZoom": 14,
+      "maxZoom": 15,
+      "source": "tmsource://styles/osm-vectors.tm2source"
     }
   }
 }
