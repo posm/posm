@@ -54,7 +54,8 @@ E.g.:
 
 ```json
 {
-  "name": "Dvizarasekwa, Zimbabwe",
+  "title": "Dvizarasekwa, Zimbabwe",
+  "name": "dvizarasekwa",
   "description": "",
   "bbox": [30.904111862182614, -17.821343531895728, 30.95578193664551, -17.778602961844793],
   "contents": {
