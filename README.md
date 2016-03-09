@@ -60,6 +60,9 @@ range of voltages between 12-19V. The spec'd components (below) run about USD
   GHz quad core Pentium (N3700, 6W TDP). Includes a basic case.
 * [Samsung 850 EVO 250GB](http://smile.amazon.com/gp/product/B00OAJ412U)
 * [8GB 1600MHz DDR3L CL9 SODIMM](http://smile.amazon.com/gp/product/B00KQCOTCM)
+* [Wireless N Dual Band + Bluetooth 4.0 M.2 NGFF Combo Card](https://www.thinkpenguin.com/gnu-linux/wireless-n-dual-band-bluetooth-40-m2-ngff-combo-card)
+  - needed to support AP mode with > 14 clients. Replace the stock wireless
+  card with this.
 
 ## Project-related Repositories
 
