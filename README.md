@@ -75,8 +75,8 @@ the overall effort.
 * [POSM](https://github.com/AmericanRedCross/posm) - You are here. This is the
   umbrella project for the POSM project and contains documentation and
   project-wide tasks.
-* [posm-api](https://github.com/AmericanRedCross/posm-api) - API to facilitate
-  tasking of field enumerations (surveys + mapping).
+* [posm-admin](https://github.com/AmericanRedCross/posm-admin) - Simple admin
+  interface for posm configuration & management.
 * [posm-build](https://github.com/AmericanRedCross/posm-build) - Build scripts
   and configuration for software deployment.
 
