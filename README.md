@@ -79,6 +79,8 @@ the overall effort.
   interface for posm configuration & management.
 * [posm-build](https://github.com/AmericanRedCross/posm-build) - Build scripts
   and configuration for software deployment.
+* [posm-deployments](https://github.com/AmericanRedCross/osm-export-tool2/tree/posm) - A 
+fork of the HOT Export tool used to create POSM data bundles.
 
 ### OpenMapKit
 
@@ -111,7 +113,6 @@ the overall effort.
 
 ### Ancillary
 
-* [macrocosm](https://github.com/AmericanRedCross/macrocosm) - OSM-compatible API (ARC fork)
 * [OpenDataKit](https://opendatakit.org/) - Mobile data collection for Android.
 * [OpenStreetMap](http://openstreetmap.org/) - The one, the only, OpenStreetMap.
 * [tessera](https://github.com/mojodna/tessera) -
