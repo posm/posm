@@ -79,7 +79,7 @@ the overall effort.
   interface for posm configuration & management.
 * [posm-build](https://github.com/AmericanRedCross/posm-build) - Build scripts
   and configuration for software deployment.
-* [posm-deployments](https://github.com/AmericanRedCross/osm-export-tool2/tree/posm) - A 
+* [osm-export-tool2](https://github.com/AmericanRedCross/osm-export-tool2/tree/posm) - A 
 fork of the HOT Export tool used to create POSM data bundles.
 
 ### OpenMapKit
