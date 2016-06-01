@@ -12,6 +12,7 @@ access available.
 
 POSM is built on top of Ubuntu 14.04 LTS and incorporates the following components:
 
+* osm-export-tool2
 * openstreetmap-website
 * OpenMapKitServer
 * Field Papers
@@ -43,6 +44,15 @@ The individual "deploy" scripts in `posm-build` are generally intended to be run
 without causing problems. Warnings and errors may be output, but they generally occur when a command
 that can only produce a single effect is run more than once, e.g. user creation. However, in some
 cases, data may be deleted, particularly when databases are (re-)configured.
+
+### osm-export-tool2
+
+[HOT](https://hotosm.org/)'s [OSM Export Tool](http://export.hotosm.org/) provided an excellent
+basis for producing data bundles to provision POSM with. We use a [forked
+version](https://github.com/AmericanRedCross/osm-export-tool2) that exposes additional formats
+(unfiltered OSM PBF, OSM XML) and can produce MBTiles archives. We've also contributed to [a set of
+Ansible playbooks](https://github.com/americanredcross/osm-export-ops) to ease provisioning
+development and production environments.
 
 ### openstreetmap-website
 
