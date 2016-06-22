@@ -1,4 +1,19 @@
+[TOC]
+
 # Portable OpenStreetMap (POSM)
+
+POSM (Portable OpenStreetMap) combines the parts of the OSM ecosystem that are already in heavy use by efforts like Missing Maps and makes them available offline.
+
+## Document Audience(s)
+
+1. Those familiar with OSM
+2. NGO (or other) staff interested in adopting the Missing Maps workflow (particularly offline)
+3. Those setting up POSM devices
+4. Developers interested in adapting / expanding capabilities
+
+## Problem Statement
+
+As efforts like Missing Maps make their way further into the developing world, spending longer amounts of time away from cheap and fast internet connectivity, there’s a growing need to bring the standard toolset along for the ride.
 
 ## Genesis
 
@@ -8,9 +23,21 @@ American Red Cross / Missing Maps workflow involves both OpenMapKit and Field Pa
 them together in something that could be taken into the field and used with limited or no internet
 access available.
 
-## Components
+## Philosophy
 
-POSM is built on top of Ubuntu 14.04 LTS and incorporates the following components:
+When faced with the decision of whether to create a new tool to achieve a well-defined goal, we have opted to use or adapt existing solutions and create glue components that allow them to work together with other tools that have already been incorporated into POSM.
+As POSM is primarily about collecting and improving geographic data that exists within OpenStreetMap, the OSM ecosystem is the source of first choice.
+
+
+We would rather adapt existing tools and combine them with others to achieve goals rather than write (and support) our own. Software that supports POSM should be Open Source if at all possible.
+
+“Small pieces loosely joined” describes the world we map and develop software within; therefore, it should also describe the systems we build.
+
+OpenStreetMap’s data model may appear unconventional, but the tools developed within that paradigm are generally more user-centric than more typical GIS analysis tools.
+
+## Pieces
+
+POSM is built on top of Ubuntu 14.04 LTS and incorporates the following pieces of software:
 
 * osm-export-tool2
 * openstreetmap-website
@@ -108,15 +135,80 @@ TODO `service tessera restart` after loading new data
 
 ### posm-admin
 
-## Installation
+## Modularity
+
+### Anatomy of a Components
+
+### Existing Components
+
+As above, there are a number of pieces that are combined together to form POSM. This is a more granular list of the components in use:
+
+* Admin - [posm-admin](https://github.com/AmericanRedCross/posm-admin), POSM’s administrative interface and data provisioning tool
+* Bridge - bridged networking support--allows POSM devices to be used as conventional WiFi hotspots
+* Captive - captive portal mode--prevents clients from accessing the internet while surfacing locally-available POSM services
+* Carto - [posm-carto](https://github.com/AmericanRedCross/posm-carto), a TileMill style intended to highlight data present in OSM following the [Humanitarian Data Model](http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags)
+* Field Papers - an offline-tuned [Field Papers](http://fieldpapers.org/) instance
+* GIS - Miscellaneous command-line GIS tools (GDAL et al)
+* MySQL - MySQL server (required by Field Papers)
+* Nginx - HTTP server and reverse proxy
+* NodeJS - Node.js runtime (required by other components)
+* OMK - [OpenMapKit Server](https://github.com/AmericanRedCross/OpenMapKitServer)
+* OSM - an [offline-tuned OpenStreetMap](https://github.com/AmericanRedCross/openstreetmap-website) instance
+* PostGIS - PostgreSQL server with PostGIS (required by OSM)
+* Ruby - Ruby runtime (required by Field Papers and OSM)
+* Samba - SMB fileshares
+* Tessera - Map tile server (renders posm-carto and MBTiles archives that have been provided)
+* TL - Command-line map tile Swiss Army knife
+* WiFi - access point support--allows POSM devices to be connected to wirelessly
+
+### How to Create a New Component
+
+To create a new component, first decide on a name, say, “widgets.” Next, clone [posm-build](https://github.com/AmericanRedCross/posm-build) and create a new file called `kickstart/scripts/widgets-deploy.sh` that looks like:
+
+```bash
+#!/bin/sh
+
+deploy_widgets_ubuntu() {
+}
+
+deploy widgets
+```
+
+“Widgets” can now be deployed as part of a POSM system by running `kickstart/scripts/bootstrap.sh widgets` on a previously configured system.
+
+To add “widgets” to the default set of components installed on a new system, add it to the list in `kickstart/POSM_Server_USB.cfg`.
+
+## Data Flow
+
+### Original Design
+
+https://docs.google.com/drawings/d/1LisNfiJApX3HWTMl711PQdC-baL9HF-rS2zeFk9ZMXw/edit
+
+### Actual Design
+
+tk (pretty similar to the above, actually)
+
+### Philosophy
+
+The [OpenStreetMap data model](http://wiki.openstreetmap.org/wiki/Elements) (nodes, ways, relations) is POSM’s lingua franca. Many formats may be derived from it, but all are assumed to be lossy in some way or another.
+
+OSM XML and PBF formats are effectively interchangeable, but we prefer OSM PBF for its substantially smaller file size (and roughly equivalent tool support).
+
+Once data has been loaded into the system (from export.posm.io as an OSM PBF), OSM’s API DB becomes the source of truth, as it retains the OSM data model and captures historical editing activity. It can be relatively easily converted to OSM PBF (using Osmosis) in order for other tools to create derivative forms (e.g. osm2pgsql updating a rendering database for posm-carto to use). This actually occurs periodically as part of the backup process.
+
+## Preparing a New POSM Device
 
 ### Configuration
 
-### Something like Installation but not repetitive
+### Installation
 
 ## Use
 
 ### Data Deployment
+
+#### export.posm.io
+
+#### POSM Admin
 
 ### Typical Workflow
 
