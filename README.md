@@ -40,7 +40,7 @@ throughout POSM.
   a QR code.
 * **Provision** - Artifacts associated with a _task area_.
 * **Snapshot** (Field Papers) - Identified by a Field Papers URL.
-* **Survey** (OpenMapKit) - ???
+* **Survey** (OpenMapKit) - A survey is a set of questions being asked in a form. There are several types of questions, including: number, select one, select multiple, etc. OpenMapKit provides the ability to answer questions with OpenStreetMap data.
 * **Survey Area** - A focused area within a _task area_. Should be sized
   appropriately that multiple _survey areas_ can be covered by the same time in
   a single day. Corresponds to a single _page_ within an _atlas_.
