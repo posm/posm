@@ -17,11 +17,7 @@ As efforts like Missing Maps make their way further into the developing world, s
 
 ## Genesis
 
-[Nick should explain where the idea came from.]
-
-American Red Cross / Missing Maps workflow involves both OpenMapKit and Field Papers. Wanted to join
-them together in something that could be taken into the field and used with limited or no internet
-access available.
+See [genesis.md](genesis.md).
 
 ## Philosophy
 
