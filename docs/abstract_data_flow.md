@@ -29,6 +29,12 @@ Generally speaking, data passes through POSM in the following way:
 3b. OSM XML is extracted from the local API DB.
 3c. An OMK deployment is created containing the above artifacts.
 4. OpenMapKit Android loads a deployment from OMK Server.
-5. Mappers go into the field and edit features present in the deployment / add new features.
+5a. Mappers go into the field and edit features present in the deployment / add new features with
+    OMK Android.
+5b. Mappers go into the field with Field Papers atlases and mark them up.
 6. Mappers return and sync OpenDataKit with OMK Server.
 7. OMK Server submits edits to the local OSM API.
+8. Incorporate annotations made on Field Papers atlases using JOSM and/or iD.
+9. Repeat from step 3.
+10. QA edits
+11. Merge with OpenStreetMap.org using the [POSM Replay Tool](https://github.com/americanredcross/posm-replay-tool).
