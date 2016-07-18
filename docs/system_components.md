@@ -86,7 +86,7 @@ POSM, edits are submitted to the local API instance (typically [osm.posm.io](htt
 
 Field Papers runs unmodified, as necessary configuration hooks were built in during POSM
 development. Notable changes relative to fieldpapers.org include the use of local disks (vs. S3) for
-storage of PDFs, GeoTIFFs, and uploaded snapshots, a web hook configured to notify OMK Server when
+storage of PDFs, GeoTIFFs, and uploaded snapshots, a web hook configured to notify POSM Admin when
 atlases have been created (producing an OMK "deployment" covering the same area), and exposure of an
 SMB share that allows snapshots to be uploaded in bulk by copying them to a file share.
 
@@ -103,7 +103,7 @@ It can also be used to manage some of the network settings.
 The POSM / Missing Maps workflow incorporates some Android applications that were built specifically
 for it.
 
-### OpenMapKit
+### OpenMapKit Android
 
 [OpenMapKit](http://openmapkit.org/) (OMK) is an extension of OpenDataKit allowing users to create
 professional quality mobile data collection surveys for field data collection.
