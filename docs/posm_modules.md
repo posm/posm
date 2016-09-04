@@ -73,6 +73,8 @@ on a previously configured system.
 To add `odm` to the default set of components installed on a new system, add it to the list in
 [`kickstart/POSM_Server_USB.cfg`](https://github.com/AmericanRedCross/posm-build/blob/master/kickstart/POSM_Server_USB.cfg).
 
+Here's a pull request adding support for the [blink(1) USB notification light](https://blink1.thingm.com/): https://github.com/AmericanRedCross/posm-build/pull/61
+
 ## Settings
 
 When provisioning a system, POSM settings are pulled from
