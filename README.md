@@ -13,6 +13,11 @@ For more information, check the following sources:
 * [SpatialDev's introductory blog post](http://news.spatialdev.com/portable-open-street-map/)
 * [Stamen's introductory blog post](https://hi.stamen.com/taking-open-street-map-into-the-field-a07265a08f19)
 * [Dale's announcement mailing list post](https://lists.openstreetmap.org/pipermail/talk/2015-December/075250.html)
+* [Introducing Portable OpenStreetMap](https://hi.stamen.com/introducing-portable-openstreetmap-bff9b04c0e16#.uf5robi75)
+* [Merging Offline Edits with the POSM Replay Tool](https://hi.stamen.com/merging-offline-edits-with-the-posm-replay-tool-2f39a4410d2a#.hi4xe5hlw)
+* [Field Mapping at Scale (video, transcript)](http://stateofthemap.us/2016/field-mapping-at-scale/) (State of the Map US 2016)
+* [Field Mapping at Scale (video forthcoming)](http://summit.hotosm.org/program/) (HOT Summit 2016)
+* [Portable OSM: Into the disconnected wilds (video forthcoming)](http://2016.stateofthemap.org/2016/portable-osm-osm-in-the-disconnected-wilds/) (State of the Map 2016)
 
 ## Glossary
 
