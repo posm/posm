@@ -86,6 +86,9 @@ the overall effort.
   and configuration for software deployment.
 * [osm-export-tool2](https://github.com/AmericanRedCross/osm-export-tool2/tree/posm) - A 
 fork of the HOT Export tool used to create POSM data bundles.
+* [posm-admin-ii](https://github.com/mojodna/posm-admin-ii) - Next-generation admin interface for OpenDroneMap + Imagery API management.
+* [posm-imagery-api](https://github.com/AmericanRedCross/posm-imagery-api) - GeoTIFF tiling (including MBTiles generation).
+* [posm-opendronemap-api](https://github.com/mojodna/posm-opendronemap-api) - Produce GeoTIFFs and 3D models from UAV photos using [OpenDroneMap](http://opendronemap.github.io/odm/).
 
 ### OpenMapKit
 
@@ -128,4 +131,5 @@ fork of the HOT Export tool used to create POSM data bundles.
   [tilelive](https://github.com/mapbox/tilelive)-based tile utility belt. Used
   for creating MBTiles archives from both local and remote sources.
 * [pyXforms](https://github.com/uw-ictd/pyxform)-for converting Excel based surveys.
+* [OpenDroneMap](https://github.com/OpenDroneMap/OpenDroneMap) - process photos taken by UAVs into GeoTIFFs and 3D models using Structure from Motion.
 * ...
