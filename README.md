@@ -86,9 +86,9 @@ the overall effort.
   and configuration for software deployment.
 * [osm-export-tool2](https://github.com/AmericanRedCross/osm-export-tool2/tree/posm) - A 
 fork of the HOT Export tool used to create POSM data bundles.
-* [posm-admin-ii](https://github.com/mojodna/posm-admin-ii) - Next-generation admin interface for OpenDroneMap + Imagery API management.
+* [posm-admin-ii](https://github.com/AmericanRedCross/posm-admin2) - Next-generation admin interface for OpenDroneMap + Imagery API management.
 * [posm-imagery-api](https://github.com/AmericanRedCross/posm-imagery-api) - GeoTIFF tiling (including MBTiles generation).
-* [posm-opendronemap-api](https://github.com/mojodna/posm-opendronemap-api) - Produce GeoTIFFs and 3D models from UAV photos using [OpenDroneMap](http://opendronemap.github.io/odm/).
+* [posm-opendronemap-api](https://github.com/AmericanRedCross/posm-opendronemap-api) - Produce GeoTIFFs and 3D models from UAV photos using [OpenDroneMap](http://opendronemap.github.io/odm/).
 
 ### OpenMapKit
 
