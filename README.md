@@ -78,18 +78,18 @@ the overall effort.
 
 ### POSM
 
-* [POSM](https://github.com/AmericanRedCross/posm) - You are here. This is the
+* [POSM](https://github.com/posm/posm) - You are here. This is the
   umbrella project for the POSM project and contains documentation and
   project-wide tasks.
-* [posm-admin](https://github.com/AmericanRedCross/posm-admin) - Simple admin
+* [posm-admin](https://github.com/posm/posm-admin) - Simple admin
   interface for posm configuration & management.
-* [posm-build](https://github.com/AmericanRedCross/posm-build) - Build scripts
+* [posm-build](https://github.com/posm/posm-build) - Build scripts
   and configuration for software deployment.
-* [osm-export-tool2](https://github.com/AmericanRedCross/osm-export-tool2/tree/posm) - A 
+* [osm-export-tool2](https://github.com/posm/osm-export-tool2/tree/posm) - A 
 fork of the HOT Export tool used to create POSM data bundles.
-* [posm-admin-ii](https://github.com/AmericanRedCross/posm-admin2) - Next-generation admin interface for OpenDroneMap + Imagery API management.
-* [posm-imagery-api](https://github.com/AmericanRedCross/posm-imagery-api) - GeoTIFF tiling (including MBTiles generation).
-* [posm-opendronemap-api](https://github.com/AmericanRedCross/posm-opendronemap-api) - Produce GeoTIFFs and 3D models from UAV photos using [OpenDroneMap](http://opendronemap.github.io/odm/).
+* [posm-admin-ii](https://github.com/posm/posm-admin2) - Next-generation admin interface for OpenDroneMap + Imagery API management.
+* [posm-imagery-api](https://github.com/posm/posm-imagery-api) - GeoTIFF tiling (including MBTiles generation).
+* [posm-opendronemap-api](https://github.com/posm/posm-opendronemap-api) - Produce GeoTIFFs and 3D models from UAV photos using [OpenDroneMap](http://opendronemap.github.io/odm/).
 
 ### OpenMapKit
 
