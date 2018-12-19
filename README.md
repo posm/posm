@@ -7,7 +7,7 @@ single device that can be deployed to the field alongside Red Cross staff and
 volunteers and facilitate mapping efforts, particularly when internet access is
 absent.
 
-For installation and usage instructions, check out [posm.io](https://posm.io/)!
+For installation and usage instructions, check out [posm.io/docs](http://posm.io/docs/posm/intro/)!
 
 ## More Information
 
@@ -60,18 +60,7 @@ throughout POSM.
 
 ## Hardware
 
-Our initial hardware target is an Intel NUC w/ a 256GB SSD and 8GB of RAM.
-Initial measurements show it drawing less than 10W. It can also operate on a
-range of voltages between 12-19V. The spec'd components (below) run about USD
-~$300.
-
-* [NUC Kit - BOXNUC5PPYH](http://smile.amazon.com/gp/product/B00XPVQHDU) - 2.6
-  GHz quad core Pentium (N3700, 6W TDP). Includes a basic case.
-* [Samsung 850 EVO 250GB](http://smile.amazon.com/gp/product/B00OAJ412U)
-* [8GB 1600MHz DDR3L CL9 SODIMM](http://smile.amazon.com/gp/product/B00KQCOTCM)
-* [Wireless N Dual Band + Bluetooth 4.0 M.2 NGFF Combo Card](https://www.thinkpenguin.com/gnu-linux/wireless-n-dual-band-bluetooth-40-m2-ngff-combo-card) -
-  needed to support AP mode with > 14 clients. Replace the stock wireless card
-  with this.
+Our hardware target is an Intel NUC. More info is available in the [docs](http://posm.io/docs/posm/setup/#hardware).
 
 ## Project-related Repositories
 
