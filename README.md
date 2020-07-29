@@ -7,7 +7,7 @@ single device that can be deployed to the field alongside Red Cross staff and
 volunteers and facilitate mapping efforts, particularly when internet access is
 absent.
 
-For installation and usage instructions, check out [posm.io/docs](http://posm.io/docs/posm/intro/)!
+For installation and usage instructions, check out [the intro docs](https://posm.io/posm/intro/)!
 
 ## More Information
 
