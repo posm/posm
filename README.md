@@ -1,5 +1,5 @@
 # POSM
-[![POSM](https://raw.githubusercontent.com/americanredcross/posm/master/mediakit/logo-full.png "Portable OpenStreetMap")](https://posm.io/)
+[![POSM](https://raw.githubusercontent.com/americanredcross/posm/master/mediakit/logo-full.png "Portable OpenStreetMap")](http://posm.io/)
 
 This is the GitHub home of POSM (Portable OpenStreetMap). POSM's goal is to
 integrate best-of-breed tools from a variety of sources and developers on a
@@ -7,7 +7,7 @@ single device that can be deployed to the field alongside Red Cross staff and
 volunteers and facilitate mapping efforts, particularly when internet access is
 absent.
 
-For installation and usage instructions, check out [posm.io/docs](http://posm.io/docs/posm/intro/)!
+For installation and usage instructions, check out [the intro docs](http://posm.io/posm/intro/)!
 
 ## More Information
 
@@ -60,7 +60,7 @@ throughout POSM.
 
 ## Hardware
 
-Our hardware target is an Intel NUC. More info is available in the [docs](http://posm.io/docs/posm/setup/#hardware).
+Our hardware target is an Intel NUC. More info is available in the [docs](http://posm.io/posm/setup/#hardware).
 
 ## Project-related Repositories
 
