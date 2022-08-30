@@ -1,5 +1,6 @@
-# POSM
-[![POSM](https://raw.githubusercontent.com/americanredcross/posm/master/mediakit/logo-full.png "Portable OpenStreetMap")](http://posm.io/)
+# This project is no longer being maintained.
+
+![POSM](https://raw.githubusercontent.com/americanredcross/posm/master/mediakit/logo-full.png "Portable OpenStreetMap")
 
 This is the GitHub home of POSM (Portable OpenStreetMap). POSM's goal is to
 integrate best-of-breed tools from a variety of sources and developers on a
@@ -7,7 +8,7 @@ single device that can be deployed to the field alongside Red Cross staff and
 volunteers and facilitate mapping efforts, particularly when internet access is
 absent.
 
-For installation and usage instructions, check out [the intro docs](http://posm.io/posm/intro/)!
+
 
 ## More Information
 
